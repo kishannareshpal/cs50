@@ -2,8 +2,83 @@
 <html>
     <head>
         <title>My Webpage</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./dist/app.css">
     </head>
     <body>
-        Hello, World!
+
+        <nav>
+            <p class="m-0 p-0 menu"><strong>Kishan.</strong></p>
+            <a class="nav-item  nav-item-selected" href="#">Home</a>
+            <a class="nav-item" href="./projects.html">Projects</a>
+            <a class="nav-item" href="./gallery.html">Gallery</a>
+            <a class="nav-item" href="./contacts.html">Contacts</a>
+        </nav>
+
+        <section id="whoami">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-auto">
+                    <img class="image" src="./dist/images/kishan.jpeg" alt="portrait">
+                </div>
+
+                <div class="col">
+                    <h1 class="heading"><span class="is-text-accent">#</span><i>Hello,</i></h1>
+                    <p class="text">
+                        My name is Kishan Narespal Jadav, i was born in Inhambane, Mozambique and currently living in Leicestershire, United Kingdom.
+                        Some of my favorite activities throughout the day are code, read, watch films, listen to music, eat and ride bycicle. I also like playing board games and footbal with my friends.
+                    </p>
+                    <p class="text">
+                        In a more modern language, emojis, this would be my life translated: <span class="highlighted-block">🙍🏻‍♂️🇲🇿🇬🇧👨🏻‍💻📖🍿🎧🍗🚴🏻‍♂️🎲⚽️</span>.
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <section id="projects">
+            <h1 class="heading"><span class="is-text-accent">#</span><i>What i do</i></h1>
+            <p>
+                I love computer programming.</br>
+                Writing code that looks fine and works!</br>
+                Writing code that solves problems you face or may face in real life.</br>
+                Writing code to help shape our better future.</br>
+            </p>
+
+            <h3 class="heading-2"><span class="is-text-accent">*</span>Programming Languages</h3>
+            <p>Throughout my experience, i have learned how to handle these:</p>
+            <ul class="langs">
+                <li class="html">
+                    <a href="https://en.wikipedia.org/wiki/html" class="normalized">
+                        <img src="./dist/images/html_five.svg" width="24px"> HTML (Hypertext Markup Language)
+                    </a>
+                </li>
+                <li class="php">
+                    <a href="https://en.wikipedia.org/wiki/PHP" class="normalized"><img src="./dist/images/php.svg" width="24px"> PHP (Hypertext Preprocessor)</a>
+                </li>
+                <li class="java">
+                    <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" class="normalized"><img src="./dist/images/java.svg" width="24px"> Java</a>
+                </li>
+                <li class="javascript">
+                    <a href="https://en.wikipedia.org/wiki/Javascript" class="normalized"><img src="./dist/images/javascript.svg" width="24px"> Javascript</a>
+                </li>
+                <li class="mysql">
+                    <a href="https://en.wikipedia.org/wiki/MySQL" class="normalized"><img src="./dist/images/mysql.svg" width="24px"> MySQL (Structured Query Language)</a>
+                </li>
+                <li class="cplusplus">
+                    <a href="https://en.wikipedia.org/wiki/C++" class="normalized"><img src="./dist/images/c_plus_plus.svg" width="24px"> C++</a>
+                </li>
+                <li class="swift">
+                    <a href="https://en.wikipedia.org/wiki/Swift_(programming_language)" class="normalized"><img src="./dist/images/swift.svg" width="24px"> Swift</a>
+                </li>
+            </ul>
+
+            <a target="_blank" href="https://github.com/kishannareshpal">View all open-source projects on GitHub</a>
+
+        </section>
     </body>
 </html>
