@@ -1,0 +1,11 @@
+Flask
+Flask-Session
+psycopg2-binary
+SQLAlchemy
+Werkzeug==0.15.0
+Flask-Assets
+Python-dotenv
+progress
+passlib
+pytz
+tzlocal

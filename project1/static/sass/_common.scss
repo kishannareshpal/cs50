@@ -1,0 +1,94 @@
+// Common
+@import "./bootstrap/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,400;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.b-body {
+    padding: 48px;
+}
+
+/* Color Theme Swatches in Hex */
+$quitered: #F21313;
+$red: #F23030;
+$orange: #F26666;
+$lightorange: #ffa372;
+$light: darken($color: white, $amount: 3);
+$darkgrey: #636363;
+$green: #4cbbb9;
+
+
+.b-input {
+    margin-top: 4px;
+    background-color: $light;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    font-size: 14px;
+
+
+    &:focus {
+        outline-style: none;
+        background-color: darken($color: $light, $amount: 5);
+    }
+}
+
+
+.b-label {
+    font-size: 12px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+
+.error-text {
+    color: $orange;
+}
+
+.red-text {
+    color: $red;
+}
+
+.green-text {
+    color: $green;
+}
+
+.invalid {
+    @extend .red-text;
+    font-weight: 600;
+}
+.success {
+    @extend .green-text;
+    font-weight: 600;
+}
+
+
+
+// Customize bootstrap colors for button
+.btn-primary {
+    @include button-variant($orange, $orange, $orange)
+}
+
+.btn-primary-light {
+    @include button-variant($lightorange, $lightorange, $lightorange);
+    color: white !important;
+}
+
+
+.bg-grey {
+    background-color: darken($color: white, $amount: 3) !important;
+}
+
+.rounded-xlg {
+    border-radius: 12px !important;
+}

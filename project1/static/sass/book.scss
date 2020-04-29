@@ -1,0 +1,20 @@
+// Show
+@import "common";
+@import "./components/nav";
+@import "./components/pagination";
+
+
+div.review {
+    border-radius: 12px;
+
+    &:hover, &:focus {
+        transition-timing-function: ease;
+        transition-duration: 500ms;
+        background-color: darken($color: white, $amount: 2);
+    }
+}
+
+
+.checked {
+    color: $lightorange !important;
+}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+<!-- head styles -->
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+<!-- page title -->
+{% block title %}
+    Register
+{% endblock %}
+
+<!-- page body -->
+{% block body %}
+
+    <section class="b-body">
+        <h1 class="mb-5">Register an account</h1>
+
+        {% if errors and errors['registration'] %}
+        <div class="alert alert-danger" role="alert">
+            {{ errors['registration'] }}
+        </div>
+        {% endif %}
+
+        <form action="{{ url_for('home.register') }}" autocomplete="off" method="post">
+            <p class="b-label">FULL NAME</p>
+            <input name="fullname" type="text" value="{% if errors is defined %}{{ errors['fullname']['value'] }}{% endif %}" class="b-input">
+            {% if errors and errors['fullname']['message'] is defined %}
+                <br>
+                <small class="invalid">{{ errors['fullname']['message'] }}</small>
+            {% endif %}
+            <br><br>
+            
+            <p class="b-label">USERNAME</p>
+            <input name="username" type="text" value="{% if errors is defined %}{{ errors['username']['value'] }}{% endif %}" class="b-input">
+            {% if errors and errors['username']['message'] is defined %}
+                <br>
+                <small class="invalid">{{ errors['username']['message'] }}</small>
+            {% endif %}
+            <br><br>
+
+            <p class="b-label">EMAIL</p>
+            <input name="email" type="email" value="{% if errors is defined %}{{ errors['email']['value'] }}{% endif %}" class="b-input">
+            {% if errors and errors['email']['message'] is defined %}
+                <br>
+                <small class="invalid">{{ errors['email']['message'] }}</small>
+            {% endif %}
+            <br><br>
+
+            <p class="b-label">PASSWORD</p>
+            <input name="password" type="password" class="b-input">
+            {% if errors and errors['password']['message'] is defined %}
+                <br>
+                <small class="invalid">{{ errors['password']['message'] }}</small>
+            {% endif %}
+            <br><br>
+
+            <button class="btn btn-dark" type="submit">Register</button>
+        </form>
+        <p class="mt-5">Already have an account? <a href="{{ url_for('home.login') }}" class="font-weight-bold">LOGIN</a></p>
+    </section>
+
+
+{% endblock %}

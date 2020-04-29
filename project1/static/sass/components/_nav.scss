@@ -1,0 +1,23 @@
+nav.b-topbar {
+    padding: 12px 24px;
+    background-color: white;
+    border-bottom: 1px solid $light;
+
+    .b-nav-title {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: bold;
+        color: $orange;
+    }
+
+    .b-nav-item {
+        font-weight: bold;
+        color: $darkgrey;
+
+        &:hover {
+            color: black;
+            transition-duration: 300ms;
+            text-decoration: none;
+        }
+    }
+}

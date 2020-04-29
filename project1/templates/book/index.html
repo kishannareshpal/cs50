@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+<!-- head styles -->
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/book.css') }}">
+{% endblock %}
+
+<!-- page title -->
+{% block title %}
+    Home
+{% endblock %}
+
+<!-- page body -->
+{% block body %}
+    <section class="container">
+        <div class="mt-5">
+            <h2>{{ book.title }}</h2>
+            <small class="m-0">Author: <span class="font-weight-bold">{{ book.author }}</span></small> |
+            <small class="m-0">ISBN: <span class="font-weight-bold">{{ book.isbn }}</span></small> |
+            <small class="m-0">Publication year: <span class="font-weight-bold">{{ book.year }}</span></small>
+
+            <div class="mt-2">
+                {% set ceiled_avg_rating = goodreads.average_rating|round(0, 'floor')|int %}
+                {% for x in range(5) %}
+                    {% if x < ceiled_avg_rating %}
+                        <i class="fas fa-star fa-sm"></i>
+                    {% elif (goodreads.average_rating % 1 != 0) and (x == ceiled_avg_rating) %}
+                        <i class="fas fa-star-half-alt fa-sm"></i>
+                    {% else %}
+                        <i class="far fa-star fa-sm"></i>
+                    {% endif %}
+                {% endfor %}
+                <small class="ml-2">{{ goodreads.average_rating }} / 5 (from {{ goodreads.ratings_count }} ratings from GoodReads) </small>
+            </div>
+        </div>
+
+        <div class="m-5"></div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-success" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% if my_review %}
+            <div class="container p-4 bg-grey shadow-sm rounded-xlg">
+                <p class="mb-2 font-weight-bold">Your review:</p>
+                <p>
+                    <span class="text-muted"><small>{{ my_review.created_at.strftime('%d %b, %Y %I:%M %p') }}</small></span>
+                </p>
+
+                <div class="mb-3">
+                    {% for n in range(5) %}
+                        {% if n <= (my_review.rating - 1) %}
+                            <i class="fas fa-star checked"></i>
+                        {% else %}
+                            <i class="far fa-star"></i>
+                        {% endif%}
+                    {% endfor %}
+                    <small class="ml-2">{{ my_review.rating }} / 5</small>
+                </div>
+                <div>{{ my_review.text }}</div>
+            </div>
+        {% else %}
+            <div class="mt-4">
+                <a class="btn btn-primary-light btn-outline shadow-sm px-4 py-2 rounded-pill font-weight-bold" href="{{ url_for('book.review', book_id=book.id) }}"><i class="fas fa-grin-alt mr-2"></i> Submit a review</a>
+            </div>
+        {% endif %}
+
+        <div class="mt-5">
+            {% for review in reviews %}
+                {% if not review.user_id == user.id %}
+                    <div class="mb-2 p-4 review">
+                        <p class="font-weight-bold d-flex align-items-center">
+                            <!-- <i class="fas fa-at fa-lg mr-1"></i> -->
+                            @{{ review.username }}
+                            <span class="mx-2 text-muted">–</span>
+                            <span class="text-muted"><small>{{ (review.created_at|utctolocal).strftime('%d %b, %Y %I:%M %p') }}</small></span>
+                        </p>
+
+                        <div class="mb-3">
+                            {% for n in range(5) %}
+                                {% if n <= (review.rating - 1) %}
+                                    <i class="fas fa-star checked"></i>
+                                {% else %}
+                                    <i class="far fa-star"></i>
+                                {% endif%}
+                            {% endfor %}
+                            <small class="ml-2">{{ review.rating }} / 5</small>
+                        </div>
+
+                        <p>{{ review.text }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <div class="text-center m-5">
+                <p class="p-2 d-inline-block border">
+                    This book has 
+                    {% if reviews|length == 0 %}
+                        no reviews yet.
+                    {% else%}
+                        {{ reviews|length }} reviews.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

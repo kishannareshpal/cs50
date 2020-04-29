@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+<!-- head styles -->
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+<!-- page title -->
+{% block title %}
+    Home
+{% endblock %}
+
+<!-- page body -->
+{% block body %}
+    <section class="container">
+        <h3 class="mt-5 text-center">Hello dear reader!</h3>
+        <h5 class="text-center text-muted">@{{ user.username }}</h5>
+        <p class="mb-5 text-center text-muted">Find a book you've read and review it 🔥</p>
+        
+        <form action="{{ url_for('home.index') }}" method="get">
+            <div class="row justify-content-center mt-4 mb-4">
+                <div class="col-lg-5 col-md-8 col-10">
+                    <div class="input-group">
+                        <input name="q" type="search" class="form-control rounded-pill" value="{% if search_query %}{{search_query}}{% endif %}" placeholder="Search for books..">
+                        <button type="submit" class="btn btn-primary rounded-pill ml-2"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        {% if search_query %}
+            <div class="text-center mb-4">
+                {% if books|length > 0 %}
+                        <small class="font-weight-bold text-info">Found {{ books|length }} books with keyword '{{search_query}}'...</small>
+                {% else %}
+                        <small class="font-weight-bold text-muted">Did not find any book with '{{search_query}}'.</small>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="row justify-content-center mb-5">
+            {% for book in books %}
+                <a href="{{ url_for('book.index', book_id=book.id) }}" class="col-lg-2 col-md-3 col-sm-4 col-10 card p-0 m-2 b-card-link">
+                    <div>
+                        <blockquote class="blockquote mb-0 card-body">
+                            <p class="font-weight-bold">{{ book.title }}</p>
+                            <small class="text-muted">
+                                {{ book.author }}
+                            </small>
+                        </blockquote>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        
+        
+    </section>
+{% endblock %}

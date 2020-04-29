@@ -1,0 +1,5 @@
+__pycache__
+flask_session
+.env
+.vscode
+static/css/
