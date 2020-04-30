@@ -5,6 +5,8 @@ For this project i've made a simple book review website so a user can submit and
 #### Technologies used:
 - [Python (vers. 3.6.5)](https://python.org)
 - [Heroku](https://heroku.com)
+- [Sass](https://sass-lang.com/)
+- [Bootstrap](https://getbootstrap.com/)
 - [Flask web framework](https://flask.palletsprojects.com)
 
 #### Project objectives
