@@ -26,20 +26,76 @@ $light: darken($color: white, $amount: 3);
 $darkgrey: #636363;
 $green: #4cbbb9;
 
+// My custom input
+div.b-textinput {
+    display: block;
+    border: 2px solid darken($color: white, $amount: 6);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    width: 400px;
+    max-width: 100%;
 
-.b-input {
-    margin-top: 4px;
-    background-color: $light;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    width: 300px;
-    font-size: 14px;
+    label {
+        font-weight: 700;
+        color: lighten($color: $darkgrey, $amount: 20);
+        font-size: small;
+        display: block;
+        margin: 8px 18px 0 18px;
+        padding: 0;
+    }
+
+    input {
+        width: 100%;
+        padding: 2px 18px 8px 18px;
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    p {
+        display: none;
+        width: 100%;
+        font-size: small;
+        padding: 0 18px 8px 18px;
+        margin: 0;
+    }
 
 
-    &:focus {
-        outline-style: none;
-        background-color: darken($color: $light, $amount: 5);
+    // styling invalid input mode
+    &.is-invalid {
+        border-color: $red;
+        label {
+            color: $red !important;
+
+            &::before {
+                content: "⚠︎ ";
+            }
+        }
+
+        p {
+            display: block;
+            color: lighten($color: $red, $amount: 10);
+        }
+    }
+
+    // styling invalid input mode
+    &.is-success {
+        border-color: $green;
+        label {
+            color: $green !important;
+
+            &::before {
+                content: "✓ ";
+            }
+        }
+
+        p {
+            display: block;
+            color: lighten($color: $green, $amount: 10);
+        }
     }
 }
 

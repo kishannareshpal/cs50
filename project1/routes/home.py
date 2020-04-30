@@ -54,6 +54,10 @@ def index():
 # Login
 @home.route('/login/', methods=['GET', 'POST'])
 def login():
+    uid = session.get('uid', None)
+    if uid is not None:
+        return redirect(url_for('home.index'))
+
     if request.method == 'POST':
         # Login the user
         is_login_succesful = False
@@ -106,6 +110,10 @@ def logout():
 # Register
 @home.route('/register/', methods=['GET', 'POST'])
 def register():
+    uid = session.get('uid', None)
+    if uid is not None:
+        return redirect(url_for('home.index'))
+        
     if request.method == 'POST':
         # Create the user
         is_registration_successul: bool = False
@@ -170,7 +178,7 @@ def register():
                     errors['email']['message'] = "Email already exists"
                 
                 if query_username_check:
-                    errors['username']['message'] = "Username already exists"
+                    errors['username']['message'] = "Username already taken"
 
                 is_registration_successul = False
                 # return render_template("home/register.html", errors=errors)

@@ -11,7 +11,12 @@
     <nav class="b-topbar">
         <div class="row">
             <div class="col-6">
-                <div><a class="b-nav-title" style="text-decoration: inherit;" href="{{ url_for('home.index') }}">Books 👏 review 👏</a></div>
+                <div>
+                    <a class="b-nav-title navbar-brand" style="text-decoration: inherit;" href="{{ url_for('home.index') }}">
+                        <i class="fas fa-book"></i>
+                        Books
+                    </a>
+                </div>
             </div>
 
             {% if user %}
@@ -21,12 +26,14 @@
             {% else %}
                 <div class="col-6">
                     <div class="d-flex justify-content-end align-items-center h-100 flex-row">
+                        {% if not request.endpoint in ("home.login", "home.register") %}
                         <div class="mr-4">
                             <a href="{{ url_for('home.login') }}" class="b-nav-item">Login</a>
                         </div>
                         <div>
                             <a href="{{ url_for('home.register') }}" class="b-nav-item">Register</a>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}

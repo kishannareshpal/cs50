@@ -12,26 +12,27 @@
 
 <!-- page body -->
 {% block body %}
+    <section class="container mt-5">
+        <h3>Welcome again!</h3>
+        <p class="mb-4">Login by entering your information bellow</p>
 
-    <section class="b-body">
-        <h1 class="mb-5">Login</h1>
+        <div>
+            <form action="{{ url_for('home.login') }}" method="post">
+                <div class="b-textinput {% if errors and errors['invalid'] %} is-invalid {% endif %}">
+                    <label>Username or Email</label>
+                    <input type="text" name="username_or_email">
+                    {% if errors and errors['invalid'] %}
+                    <p>{{ errors['invalid'] }}</p>
+                    {% endif %}
+                </div>
 
-        {% if errors and errors['invalid'] %}
-        <div class="alert alert-warning" role="alert">
-            {{ errors['invalid'] }}
+                <div class="b-textinput">
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Continue</button>
+            </form>
+            <p class="mt-4">Don't have an account? <a href="{{ url_for('home.register') }}" class="font-weight-bold">Create one here</a></p>
         </div>
-        {% endif %}
-
-        <form action="{{ url_for('home.login') }}" method="post">
-            <p class="b-label">USERNAME or EMAIL</p>
-            <input name="username_or_email" placeholder="email/username" type="text" class="b-input"><br><br>
-            <p class="b-label">PASSWORD</p>
-            <input name="password" placeholder="password" type="password" class="b-input"><br><br>
-            <button class="btn btn-dark" type="submit">Login</button>
-        </form>
-        
-        <p class="mt-5">New here? <a href="{{ url_for('home.register') }}" class="font-weight-bold">REGISTER</a></p>
     </section>
-
-
 {% endblock %}

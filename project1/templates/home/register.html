@@ -13,7 +13,65 @@
 <!-- page body -->
 {% block body %}
 
-    <section class="b-body">
+    <section class="container mt-5">
+        <h3>Register an account</h3>
+        <p class="mb-4">Create an account to be able to view and review books.</p>
+
+        {% if errors and errors['invalid'] %}
+        <div class="alert alert-warning" role="alert">
+            {{ errors['invalid'] }}
+        </div>
+        {% endif %}
+
+        <div>
+            <form action="{{ url_for('home.register') }}" method="post">
+                {% with has_error_fullname = True if errors and errors['fullname']['message'] is defined else False %}
+                <div class="b-textinput {% if has_error_fullname %}is-invalid{% endif %}">
+                    <label>Full name</label>
+                    <input type="text" name="fullname" value="{% if errors is defined %}{{ errors['fullname']['value'] }}{% endif %}">
+                    {% if has_error_fullname %}
+                    <p>{{ errors['fullname']['message'] }}</p>
+                    {% endif %}
+                </div>
+                {% endwith %}
+
+                {% with has_error_email = True if errors and errors['email']['message'] is defined else False %}
+                <div class="b-textinput {% if has_error_email %}is-invalid{% endif %}">
+                    <label>Email</label>
+                    <input type="email" name="email" value="{% if errors is defined %}{{ errors['email']['value'] }}{% endif %}">
+                    {% if has_error_email %}
+                    <p>{{ errors['email']['message'] }}</p>
+                    {% endif %}
+                </div>
+                {% endwith %}
+
+                {% with has_error_username = True if errors and errors['username']['message'] is defined else False %}
+                <div class="b-textinput {% if has_error_username %}is-invalid{% endif %}">
+                    <label>Username</label>
+                    <input type="text" name="username" value="{% if errors is defined %}{{ errors['username']['value'] }}{% endif %}">
+                    {% if has_error_username %}
+                    <p>{{ errors['username']['message'] }}</p>
+                    {% endif %}
+                </div>
+                {% endwith %}
+
+                {% with has_error_password = True if errors and errors['password']['message'] is defined else False %}
+                <div class="b-textinput {% if has_error_password %}is-invalid{% endif %}">
+                    <label>Password</label>
+                    <input type="password" name="password">
+                    {% if has_error_password %}
+                    <p>{{ errors['password']['message'] }}</p>
+                    {% endif %}
+                </div>
+                {% endwith %}
+
+                <button class="btn btn-primary mt-3" type="submit">Register</button>
+            </form>
+            <p class="mt-4">Already have an account? <a href="{{ url_for('home.login') }}" class="font-weight-bold">Login here</a></p>
+        </div>
+    </section>
+
+    <!-- <section class="b-body">
         <h1 class="mb-5">Register an account</h1>
 
         {% if errors and errors['registration'] %}
@@ -25,10 +83,7 @@
         <form action="{{ url_for('home.register') }}" autocomplete="off" method="post">
             <p class="b-label">FULL NAME</p>
             <input name="fullname" type="text" value="{% if errors is defined %}{{ errors['fullname']['value'] }}{% endif %}" class="b-input">
-            {% if errors and errors['fullname']['message'] is defined %}
-                <br>
-                <small class="invalid">{{ errors['fullname']['message'] }}</small>
-            {% endif %}
+            
             <br><br>
             
             <p class="b-label">USERNAME</p>
@@ -58,7 +113,7 @@
             <button class="btn btn-dark" type="submit">Register</button>
         </form>
         <p class="mt-5">Already have an account? <a href="{{ url_for('home.login') }}" class="font-weight-bold">LOGIN</a></p>
-    </section>
+    </section> -->
 
 
 {% endblock %}
