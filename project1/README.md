@@ -1,7 +1,5 @@
-# Project 1
-For this i've made a simple book review website so a user can submit and view other people's reviews.
-
-You can visit the running website at: [https://kishan-cs50-project1-books.herokuapp.com/]()
+# Project 1: Web Programming with Python and JavaScript
+For this project i've made a simple book review website so a user can submit and view other people's reviews.
 
 
 #### Technologies used:
