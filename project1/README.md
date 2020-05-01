@@ -49,31 +49,26 @@ You will need these values on setup.
 
 ### Setup
 1. Clone this repository.
-2. Configure the Environment Variables in any of these ways:
-    1. **Via `.env` file**:
+2. Configure the Environment Variables:
+    1. **On the `.env` file**:
         1. Duplicate **`.env.example`** file and rename it to **`.env`**.
         2. Edit the **`.env`** file to add our *DATABASE_URL* and *GOODREADS_API_KEY* values that we retrieved from the pre-setup above.
         
-    2. **Via terminal**:
+    2. **And in the terminal**:
         ```bash
         # For mac only:
-        export FLASK_APP=application.py
-        export FLASK_DEBUG=1
         export DATABASE_URL=<YOUR_DATABASE_URI_HERE>
-        export GOODREADS_API_KEY=<YOUR_GOODREADS_API_KEY_HERE>
         
         # For windows only:
-        set FLASK_APP=application.py
-        set FLASK_DEBUG=1
         set DATABASE_URL=<YOUR_DATABASE_URI_HERE>
-        set GOODREADS_API_KEY=<YOUR_GOODREADS_API_KEY_HERE>
         ```
 
 3. Run **`pip3 install -r requirements.txt`** to install the required dependencies.
 4. Compile the sass style via **`sass --no-source-map static/sass:static/css`**
-5. Run **`python3 ./standalone/create.py`** to create all necessary tables on our database.
-6. Run **`python3 ./standalone/import.py`** to import our `./books.csv` file into our database.
-7. Run **`flask run`** to start the application.
+5. **`cd`** into **`./standalone`** dir and:
+- Run **`python3 create.py`** to create all necessary tables on our database.
+- Run **`python3 import.py`** to automatically import our `./books.csv` data file into our database.
+7. And now Run **`flask run`** to start the application.
 8. Navigate to the URL provided by the command above, and you should see the Login page or the Home page if you have already logged in before.
 
 <br>

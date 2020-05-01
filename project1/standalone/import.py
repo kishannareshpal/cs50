@@ -27,10 +27,22 @@ class Book:
 
 
 def main():
-    books_csvfile_path = "../books.csv"
-    
     # open the books.csv file
-    books_csvfile = open(books_csvfile_path)
+    inloop = True
+    books_csvfile_path = "../books.csv"
+    books_csvfile = None
+    while inloop:
+        try:
+            if (books_csvfile_path.endswith("books.csv")):
+                books_csvfile = open(os.path.realpath(books_csvfile_path))
+                inloop = False
+            else:
+                raise FileNotFoundError();
+        except FileNotFoundError as error:
+            print("We couldn't find the 'books.csv' file.\n")
+            books_csvfile_path = input("Please input the 'books.csv' absolute file path: ")
+            inloop = True
+
     books = csv.reader(books_csvfile)
 
     # itterate through all books
@@ -43,7 +55,6 @@ def main():
             book = Book(isbn, title, author, year)
             book.insertToTable()
             progress.next()
-            
         row_count += 1
 
     db.commit()
