@@ -1,5 +1,6 @@
 # Project 1: Web Programming with Python and JavaScript
-For this project i've made a simple book review website so a user can submit and view other people's reviews.
+For this project i've made a simple book review website so a user can submit and view other people's reviews.<br>
+View brief presentation: https://youtu.be/lJ9QbbLDTbQ
 
 
 #### Technologies used:
@@ -39,7 +40,7 @@ GET /api/:isbn
 
 <br>
 
-## Build and run locally
+## Build and run locally / Contribute
 ### Pre-setup: Database and GoodReads API
 You will need these values on setup.
 * **DATABASE_URL** – Create a new app on [Heroku](https://heroku.com), install the "Heroku Postgress" add-on, click to view the credentials of the "Heroku Postgress" and copy the `URI`. E.g.: It starts with `psql:...`.
