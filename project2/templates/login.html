@@ -1,0 +1,32 @@
+{% extends 'layouts/base.html' %}
+
+
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5 p-5">
+    <i class="fas fa-crow fa-3x color-primary"></i>
+    <h3 class="mb-3">Sign in</h3>
+    <form action="{{ url_for('login') }}" method="POST" autocomplete="off">
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type != 'hidden' %}
+            <div class="c-textinput {% if field.errors %}is-invalid{% endif %}">
+                {{ field.label }}
+                {{ field(class_="mb-1", autocomplete="off") }}
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                    <p>{{ error }}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <button style="border: 3px solid lightgrey" type="submit" class="c-button mt-3">CONTINUE <i class="ml-2 fas fa-arrow-right"></i></button>
+        <p class="pt-3"><a class="text-muted" href="{{ url_for('register') }}">Don't have an account? Register now</a></p>
+    </form>
+</div>
+{% endblock %}

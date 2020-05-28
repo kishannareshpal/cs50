@@ -1,0 +1,111 @@
+@import "./variables";
+
+.c-icon-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: $lightgrey;
+        transition-duration: 220ms;
+    }
+}
+
+
+.c-button {
+    border: none;
+    padding: 8px 18px;
+    border-radius: 12px;
+    color: black;
+    transition-duration: 178ms;
+    font-weight: bold;
+
+
+    &:hover {
+        background-color: $lightgrey;
+    }
+
+    &:active {
+        background-color: darken($color: $lightgrey, $amount: 5)
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        color: $grey;
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+
+.c-button--primary {
+    @extend .c-button;
+
+    border-radius: 50rem;
+    color: white;
+    background-color: $primary;
+    min-width: fit-content;
+    
+    &:hover {
+        background-color: darken($color: $primary, $amount: 4)
+    }
+
+    &:active {
+        background-color: darken($color: $primary, $amount: 8)
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        color: $grey;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+
+.c-button--secondary {
+    @extend .c-button;
+
+    border-radius: 50rem;
+    color: black;
+    background-color: $secondary;
+    width: fit-content;
+    
+    &:hover {
+        background-color: darken($color: $secondary, $amount: 4)
+    }
+
+    &:active {
+        background-color: darken($color: $secondary, $amount: 8)
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        color: $grey;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
