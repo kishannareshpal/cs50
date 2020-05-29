@@ -60,6 +60,7 @@ GET /login
 GET /register
 GET /logout
 ```
+- While the use is typing a display name on the Register page, the input will auto-verify if the typed display name is available or not.
 - Once the user is logged in, he will be presented with a list of all public channels available from the home page. There will also be an option to create channels.
 
 #### Home page
