@@ -4,6 +4,8 @@ For this project i've made a Real Time online messaging service, much like Slack
 
 View brief presentation: https://youtu.be/_BnWwfzhVv4
 
+<img src="https://i.imgur.com/nW05HYF.png" width="768px"></img>
+
 
 #### Technologies used:
 - [Python (vers. 3.6.5)](https://python.org)
