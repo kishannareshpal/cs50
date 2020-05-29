@@ -1,2 +1,4 @@
 .env
-__pycache__
+**/__pycache__/
+static/css
+flask_session

@@ -3,7 +3,6 @@ import os
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_session import Session
 from flask_socketio import SocketIO, emit, join_room, leave_room
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 from data.models import User, Message
@@ -11,8 +10,6 @@ from utils.forms import UserForm
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # config session
 app.config["SESSION_PERMANENT"] = False
@@ -38,34 +35,10 @@ users: list = []
 def home():
     # verify if user is logged in.
     # if he is not, show the login page. otherwise continue showing home page.
- # verify if user is already logged in.
-    # if he is, redirect home. otherwise continue showing login page.
-    try:
-        displayname = session['displayname']
-        # user is logged in. continua on this page.
-            
-    except KeyError as error:
-        # User is not logged in. show login page.
-        return redirect(url_for('login'))
-
-    try:
-        p = session['lastchannel']
-        print(p)
-    except:
-        pass
-
+    
     try:
         displayname = session['displayname']
         channelslist = list(channels)
-
-        # try:
-
-        #     print(f"worked {lastchannel}")
-
-        # except KeyError as error:
-        #     # no last selected channel found.
-        #     print(f"errorrrrrr")
-        #     pass
 
         return render_template("home.html", channels=channelslist, displayname=displayname)
 

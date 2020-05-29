@@ -2,7 +2,7 @@
 ### Web Programming with Python and JavaScript
 For this project i've made a Real Time online messaging service, much like Slack, where users are able to sign in with a unique display name, create and join channels (chatrooms) where they can communicate in.
 
-View brief presentation: <mark>INSERT YOUTUBE VIDEO HERE</mark>
+View brief presentation: https://youtu.be/_BnWwfzhVv4
 
 
 #### Technologies used:
