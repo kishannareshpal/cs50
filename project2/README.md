@@ -36,12 +36,12 @@ View brief presentation: https://youtu.be/_BnWwfzhVv4
     2. **And in the terminal**:
         ```bash
         # For mac only:
-        export FLASK_APP=apllication.py
+        export FLASK_APP=application.py
         export FLASK_DEBUG=1
         export SECRET_KEY=<INSERT_RANDOM_CHARS_HERE> # e.g: export SECRET_KEY=iadh923jd
 
         # For windows only:
-        set FLASK_APP=apllication.py
+        set FLASK_APP=application.py
         set FLASK_DEBUG=1
         set SECRET_KEY=<INSERT_RANDOM_CHARS_HERE> # e.g: set SECRET_KEY=iadh923jd
         ```
