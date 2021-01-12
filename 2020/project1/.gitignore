@@ -1,3 +1,9 @@
+# # # # # # # #
+# JavaScript  #
+# # # # # # # #
+node_modules
+
+
 # # # # # #
 # General #
 # # # # # #
@@ -6,8 +12,6 @@
 
 # Editors
 .vscode
-
-
 
 # # # # # # # # # #
 # Python Specific #
@@ -157,8 +161,3 @@ cython_debug/
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
-# Ignore apps's static and media files, because they are generated with webpack
-# Only for Development only
-capstone/static/capstone/**
-!capstone/static/capstone
-media/**

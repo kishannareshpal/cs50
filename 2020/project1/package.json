@@ -1,0 +1,16 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "sass:compile": "node-sass ./encyclopedia/static/encyclopedia/styles.scss ./encyclopedia/static/encyclopedia/styles.css",
+    "sass:watch": "node-sass --watch ./encyclopedia/static/encyclopedia/styles.scss ./encyclopedia/static/encyclopedia/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
