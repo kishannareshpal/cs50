@@ -1,0 +1,19 @@
+.bookings-card {
+    border-radius: 16px;
+}
+
+.booking-number {
+    transition-duration: 244ms;
+
+    &:hover {
+        cursor: pointer;
+        background-color:  #c1ebff;
+        border-radius: 8px;
+        padding: 6px;
+    }
+}
+
+
+.note {
+    background-color: #c1ebff;
+}

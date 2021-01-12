@@ -1,0 +1,18 @@
+service_type,title,description,price_in_gbp,duration_in_mins
+Hair & Beard,Full Head Shave & Cut-throat w/ foam,"",17.50,20
+Hair & Beard,Standard Haircut & Beard Trim,"Regular cut, Taper cut, Patterns, Short sides and back, etc..",22.50,45
+Hair & Beard,Standard Haircut & Wet Trim,"",25.00,35
+Hair & Beard,Skin Fade Haircut & Beard Trim,"",25.00,45
+Hair & Beard,Skin Fade Haircut & Wet Shave,"",25.00,30
+Just Hair,Kids Haircut,"Under 16's – Standard or Skin Faded",11.00,20
+Just Hair,Standard Haircut,"Regular cut, Taper cut, Patterns, Short sides and back, etc..",12.00,20
+Just Hair,Skin Fade Haircut,"w/ Foil Shaver",17.50,30
+Just Hair,Full Head Shave (Bald),"",15.00,12
+Just Beard,Beard Trim,"Beard tidy up & defining lines",12.50,25
+Just Beard,Traditional Hot Towel Shave,"Hot towel steam, Close cut-throat with foam, Cold Towel",17.50,30
+Just Beard,Wet Shave,"Close cut-throat shave with foam",15.00,20
+Just Beard,Full Beard Re-shape,"Cut-throat with foam, Cold Towel",17.50,30
+Facial Treatments,Full Face Black Mask Facial,"Steam, Cleanse, Mask, Tone & Moisturise",15.00,40
+Facial Treatments,Facial Waxing,"Cheeks, Nose, Ears, Eyebrows",10.00,15
+Facial Treatments,Facial Waxing (One Area),"",5.00,5
+Facial Treatments,Eyebrow Shape Up,"w/ Blade or Wax",5.00,10
