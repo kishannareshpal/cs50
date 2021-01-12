@@ -103,7 +103,7 @@ How in the world is my final project different from the previous projects:
   npm run dev
 
   # Or watch (recommended for development):
-  npm run watch
+  npm run dev-watch
 ```
 
 7. Make database migrations:
