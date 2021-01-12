@@ -27,7 +27,7 @@ View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
 
 #### Technologies used:
 - [Python (vers. 3.9.1)](https://python.org)
-- [Django](https://sass-lang.com/)
+- [Django](https://djangoproject.com/)
 - [Javascript (ES6) with Linter](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [ReactJS](https://reactjs.org/)
 - [Sass](https://sass-lang.com/)
