@@ -1,0 +1,53 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Search results</h1>
+
+    {% if matched_entries %}
+        <span class="badge badge-pill badge-primary">{{ num_entries }} entr{{ num_entries|pluralize:"y,ies" }} found</span>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            No entries found for your query "{{ q }}"
+        </div>
+
+        <a href="{% url 'index' %}" class="btn btn-primary">View all pages</a>
+    {% endif %}
+
+
+    <div class="row row-cols-4 mt-4">
+        {% for matched_entry in matched_entries %}
+            <div class="col my-2">
+                <div class="wiki card border-danger">
+                    <div class="card-body py-4">
+                        <a class="stretched-link text-reset text-decoration-none font-weight-bold" href="{% url 'show' matched_entry %}">{{ matched_entry }}</a>
+                        <div>
+                            <small class="text-muted">
+                                Learn more about {{ matched_entry|lower }}.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- {% for entry in entries %}
+        <div class="col my-2">
+            <div class="card border-danger">
+                <div class="card-body py-4">
+                    <a class="stretched-link text-reset text-decoration-none font-weight-bold" href="{% url 'show' entry %}">{{ entry }}</a>
+                    <div>
+                        <small class="text-muted">
+                            Read about {{ entry|lower }}.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %} -->
+
+{% endblock %}

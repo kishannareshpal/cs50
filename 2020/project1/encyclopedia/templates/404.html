@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ error_title }}
+{% endblock %}
+
+{% block body %}
+    <h1>404</h1>
+    <h4>Sorry, page not found.</h4>
+    <p>The page you were looking does not exist, or it unfortunately got deleted.</p>
+
+    <a href="{% url 'index' %}" class="btn btn-primary">View all pages</a>
+{% endblock %}

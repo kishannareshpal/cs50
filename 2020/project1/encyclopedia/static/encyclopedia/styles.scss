@@ -1,0 +1,96 @@
+$primary: #FFFFFF; // #0F131B
+$secondary: #1768ff; // #0F131B
+$primary-light: #F7F6F1;
+$accent: #D7545C;
+$primary-dark: #0a0b0e;
+$primary-text: white;
+
+body {
+    margin: 0;
+    background-color: $primary;
+}
+
+.sidebar {
+    background-color: $primary-light;
+    height: 100vh;
+    padding: 32px;
+    
+    .search {
+        margin-top: 24px
+    }
+
+    .btn-menu-item {
+        &.active {
+            background-color: transparentize($color: black, $amount: 0.9)
+        }
+
+        &:hover {
+            background-color: transparentize($color: black, $amount: 0.9)
+        }
+        
+    }
+
+}
+
+.main {
+    padding: 32px;
+    color: black;
+}
+
+
+.wiki.card {
+    animation: out 200ms;
+    animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+
+    &:hover {
+        background-color: transparentize($color: #000000, $amount: 0.94);
+        transition-duration: 200ms;
+        animation: in 200ms;
+        animation-fill-mode: forwards;
+        color: $accent;
+    }
+}
+
+.draft.card {
+    &:hover {
+        background-color: transparentize($color: #000000, $amount: 0.94);
+    }
+}
+
+
+@keyframes in {
+    from   { 
+        transform: scale(1);
+    }
+    to { 
+        transform: scale(1.06);  // 1,06
+    }
+}
+
+@keyframes out {
+    from   { 
+        transform: scale(1.06); 
+    }
+    to { 
+        transform: scale(1);
+    }
+}
+
+
+code {
+    white-space: pre;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+
+.in-draft {
+    display: inline-block;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 8px;
+}
+

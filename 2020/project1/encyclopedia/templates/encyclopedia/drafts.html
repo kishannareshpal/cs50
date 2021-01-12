@@ -1,0 +1,32 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Your drafts</h1>
+    <div class="badge badge-pill badge-primary">{{ drafts|length }} draft{{ drafts|pluralize }}</div>
+    <hr>
+
+    <div class="mt-4">
+        {% for draft in drafts %}
+        <div class="draft card border-dark mt-2">
+            <div class="card-body py-4">
+                <div>
+                    <a class="text-reset text-decoration-none font-weight-bold" href="{% url 'editdraft' draft.id %}">{{ draft.title }}</a>
+                </div>
+                <div class="mt-2">
+                    <a class="font-weight-bold text-warning" style="text-decoration: underline;" href="{% url 'editdraft' draft.id %}"><i class="fas fa-pen mr-2"></i>Edit</a>
+                    <span class="mx-2">|</span> 
+                    <a class="font-weight-bold text-danger" style="text-decoration: underline;" href="{% url 'deletedraft' draft.id %}"><i class="fas fa-trash mr-2"></i>Delete</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+            <div class="col text-muted">
+                You have saved no drafts.
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
