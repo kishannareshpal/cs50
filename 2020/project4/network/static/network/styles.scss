@@ -1,0 +1,123 @@
+@import './ReactToastify.min.css';
+
+.form-control {
+    &.no-outline {
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.post-card {
+    border-radius: 0;
+    transition-duration: 323ms;
+
+    &:hover {
+        background-color: #f7f7f7;
+    }
+
+    .username {
+        &:hover {
+            cursor: pointer;
+            color: #58d853
+        }
+    }
+    
+    .date-and-time {
+        color: silver;
+    }
+}
+
+.post-edited {
+    transition-duration: 500ms;
+    background-color: #ffffdf
+}
+
+.like-btn-container {
+    &:hover {
+        color: red;
+    }
+}
+
+.btn-like {
+    padding: 6px 10px;
+    border-radius: 100%;
+    border: none;
+    background-color: transparent;
+    transition-duration: 342ms;
+    color: black;
+
+    &:hover {
+        cursor: pointer;
+        color: #ce0101;
+        background-color: #f2e5e5;
+    }
+
+    &:focus {
+        background-color: #ececec;
+        outline: none;
+    }
+
+    &:active {
+        background-color: #ecd6d6;
+    }
+
+    &.is-liked {
+        color: red;
+    }
+}
+
+
+.btn-edit {
+    padding: 2px 8px;
+    font-size: small;
+    background: #ffffff;
+    border: 1px solid black;
+
+    &:hover {
+        background: #ebebeb;
+        box-shadow: 1px 1px 2px black;
+    }
+
+    &:focus, &:active {
+        outline: none !important;
+    }
+
+    &.is-editing {
+        background: #b3fdb0 !important;
+        font-weight: bold;
+    }
+}
+
+.btn-delete {
+    padding: 2px 8px;
+    font-size: small;
+    background: #ffffff;
+    border: 1px solid black;
+
+    &:hover {
+        background: #ebebeb;
+        border: 1px solid #ce0101;
+        color: red;
+        box-shadow: 1px 1px 2px #ce0101;
+    }
+
+    &:focus, &:active {
+        outline: none !important;
+    }
+
+    &.btn-delete-confirmation {
+        background: #ffbdb0;
+        font-weight: bold;
+    }
+}
+
+
+.edited-text {
+    cursor: help;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}

@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="app"><!-- React! --></div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+    // Some globals
+    const isUserLoggedIn = ("{{ user.is_authenticated }}" === "True");
+    const currentUser = {
+       id: "{{ user.id }}",
+       username: "{{ user.username }}"
+    }
+</script>
+{% endblock %}

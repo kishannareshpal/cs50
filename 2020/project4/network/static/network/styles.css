@@ -1,0 +1,102 @@
+@import './ReactToastify.min.css';
+.form-control.no-outline {
+  border: none;
+  background-color: transparent;
+}
+.form-control.no-outline:focus {
+  box-shadow: none;
+}
+
+.post-card {
+  border-radius: 0;
+  transition-duration: 323ms;
+}
+.post-card:hover {
+  background-color: #f7f7f7;
+}
+.post-card .username:hover {
+  cursor: pointer;
+  color: #58d853;
+}
+.post-card .date-and-time {
+  color: silver;
+}
+
+.post-edited {
+  transition-duration: 500ms;
+  background-color: #ffffdf;
+}
+
+.like-btn-container:hover {
+  color: red;
+}
+
+.btn-like {
+  padding: 6px 10px;
+  border-radius: 100%;
+  border: none;
+  background-color: transparent;
+  transition-duration: 342ms;
+  color: black;
+}
+.btn-like:hover {
+  cursor: pointer;
+  color: #ce0101;
+  background-color: #f2e5e5;
+}
+.btn-like:focus {
+  background-color: #ececec;
+  outline: none;
+}
+.btn-like:active {
+  background-color: #ecd6d6;
+}
+.btn-like.is-liked {
+  color: red;
+}
+
+.btn-edit {
+  padding: 2px 8px;
+  font-size: small;
+  background: #ffffff;
+  border: 1px solid black;
+}
+.btn-edit:hover {
+  background: #ebebeb;
+  box-shadow: 1px 1px 2px black;
+}
+.btn-edit:focus, .btn-edit:active {
+  outline: none !important;
+}
+.btn-edit.is-editing {
+  background: #b3fdb0 !important;
+  font-weight: bold;
+}
+
+.btn-delete {
+  padding: 2px 8px;
+  font-size: small;
+  background: #ffffff;
+  border: 1px solid black;
+}
+.btn-delete:hover {
+  background: #ebebeb;
+  border: 1px solid #ce0101;
+  color: red;
+  box-shadow: 1px 1px 2px #ce0101;
+}
+.btn-delete:focus, .btn-delete:active {
+  outline: none !important;
+}
+.btn-delete.btn-delete-confirmation {
+  background: #ffbdb0;
+  font-weight: bold;
+}
+
+.edited-text {
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+/*# sourceMappingURL=styles.css.map */
