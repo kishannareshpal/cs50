@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Logo from '../images/gato-logo.svg';
 import useUser from '../hooks/useUser';
 import { NavLink } from 'react-router-dom';
-import { LinkOutlined } from '@ant-design/icons'
+import { LinkOutlined } from '@ant-design/icons';
 import Logout from './Logout';
-import './Navbar.stylesheet.scss';
+import './NavBar.stylesheet.scss';
 
 
 const NavBar = () => {
