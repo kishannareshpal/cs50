@@ -166,9 +166,9 @@ media/**
 
 
 
-# # # # # # # # # # # # 
-# Javascript Specific # 
-# # # # # # # # # # # # 
+# # # # # # # # # # # #
+# Javascript Specific #
+# # # # # # # # # # # #
 
 # Logs
 report.**.**
@@ -177,7 +177,6 @@ logs
 npm-debug.log*
 
 # Dependency
-package-lock.json
 node_modules
 node_modules/
 
