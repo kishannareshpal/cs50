@@ -157,11 +157,6 @@ cython_debug/
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
-# Ignore apps's static and media files, because they are generated with webpack
-# Only for Development only
-capstone/static/capstone/**
-!capstone/static/capstone
-media/**
 
 
 
@@ -177,9 +172,7 @@ logs
 npm-debug.log*
 
 # Dependency
-package-lock.json
 node_modules
-node_modules/
 
 # ReactJS
 build/
