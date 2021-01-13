@@ -149,7 +149,16 @@ def submit(request):
                 is_saving_edit = "btn_saveedit" in postdata
                 if util.entry_exists(title) and not is_saving_edit:
                     # Entry exists. Abort!
-                    return HttpResponse("An encyclopedia with the same title already exists. Could not save", status=409)
+                    form.add_error("title", "An encyclopedia with the same title already exists")
+                    # If the form is invalid, re-render the page with existing information, and showing the validation errors.
+                    # Append css class to every field that contains errors.
+                    for field in form.errors:
+                        form[field].field.widget.attrs['class'] += ' is-invalid'
+
+                    return render(request, "encyclopedia/submit.html", {
+                        "activemenu": "submit",
+                        "form": form
+                    })
 
                 if "draft_id" in postdata:
                     # If we are submitting from a draft, delete this draft first
