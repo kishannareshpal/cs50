@@ -1,5 +1,8 @@
-# Project 1: Web Programming with Python and JavaScript
-For this project i've made a simple book review website so a user can submit and view other people's reviews.<br>
+# Project 1
+
+### Book Review
+For this project I've made a simple book review website so a user can submit and view other people's reviews.
+
 View brief presentation: https://youtu.be/lJ9QbbLDTbQ
 
 
@@ -10,7 +13,7 @@ View brief presentation: https://youtu.be/lJ9QbbLDTbQ
 - [Bootstrap](https://getbootstrap.com/)
 - [Flask web framework](https://flask.palletsprojects.com)
 
-#### Project objectives
+#### Project requirements
 :white_check_mark: Able to register.<br>
 :white_check_mark: Able to login if already registered.<br>
 :white_check_mark: Able to logout if logged in.<br>

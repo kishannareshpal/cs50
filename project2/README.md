@@ -1,8 +1,8 @@
-# Project 2 (Flack)
-### Web Programming with Python and JavaScript
+# Project 2
+### Flack
 For this project i've made a Real Time online messaging service, much like Slack, where users are able to sign in with a unique display name, create and join channels (chatrooms) where they can communicate in.
 
-View brief presentation: https://youtu.be/_BnWwfzhVv4
+View brief presentation here: https://youtu.be/_BnWwfzhVv4
 
 <img src="https://i.imgur.com/nW05HYF.png" width="768px"></img>
 
@@ -15,7 +15,7 @@ View brief presentation: https://youtu.be/_BnWwfzhVv4
 - [Flask web framework](https://flask.palletsprojects.com)
 - [Socket.io 2.0]("https://socket.io/") and [flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/)
 
-#### Project objectives
+#### Project requirements
 :white_check_mark: Login and register with a unique display name<br>
 :white_check_mark: Able to create public channels (add chatrooms)<br>
 :white_check_mark: Able to view all public channels (list chatrooms)<br>
