@@ -14,12 +14,12 @@ View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
 - [Bootstrap (vers. 5.0.0-beta1)](https://getbootstrap.com)
 
 #### Project requirements
-:white_check_mark: New Posts.
-:white_check_mark: All posts.
-:white_check_mark: Profile page.
-:white_check_mark: Follow and Unfollow a user.
-:white_check_mark: Following posts.
-:white_check_mark: Edit Post.
+:white_check_mark: New Posts.<br>
+:white_check_mark: All posts.<br>
+:white_check_mark: Profile page.<br>
+:white_check_mark: Follow and Unfollow a user.<br>
+:white_check_mark: Following posts.<br>
+:white_check_mark: Edit Post.<br>
 :white_check_mark: Like and Unlike a post.
 
 
