@@ -103,12 +103,16 @@ def submit(request):
     if request.method == "POST":
         # Save the entry into a file
         postdata = request.POST
-        form = SubmitForm(postdata) # Take in the data the user submitted and save it as form
+        print(postdata)
+        # Take in the data the user submitted and save it as form
+        form = SubmitForm(postdata, initial={
+            "title": postdata.get("title", "")
+        })
         
         if form.is_valid():
             # Check if form data is valid
             title = form.cleaned_data.get("title", "")
-            title = title[:1].upper() + title[1:] # capitalize ONLY the first letter of the title without modyfing the subsequent characters (E.g: hTML -> HTML, cSS -> CSS)
+            title = title[:1].upper() + title[1:] # capitalize ONLY the first letter of the title without modifying the subsequent characters (E.g: hTML -> HTML, javaScript -> JavaScript)
             content = form.cleaned_data.get("body", "")
 
             # Check if we are saving to draft, or submitting the wiki page.
@@ -138,12 +142,19 @@ def submit(request):
                     util.delete_entry(title)
                     return HttpResponseRedirect(reverse("index"))
 
-
             else:
                 # Submit the .md page into ./entries/{title}.md
+                # Don't allow saving a wiki page with the same title
+
+                is_saving_edit = "btn_saveedit" in postdata
+                if util.entry_exists(title) and not is_saving_edit:
+                    # Entry exists. Abort!
+                    return HttpResponse("An encyclopedia with the same title already exists. Could not save", status=409)
+
                 if "draft_id" in postdata:
                     # If we are submitting from a draft, delete this draft first
                     util.delete_draft_by_id(request, postdata["draft_id"])
+
                 # Now save the entry.
                 util.save_entry(title, content)
 
@@ -193,7 +204,8 @@ def editwiki(request, title):
 
         return render(request, "encyclopedia/submit.html", {
             "activemenu": "submit",
-            "form": form
+            "form": form,
+            "is_editing": True
         })
     
 
