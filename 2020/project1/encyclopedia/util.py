@@ -28,6 +28,20 @@ def save_entry(title, content):
     default_storage.save(filename, ContentFile(content))
 
 
+def entry_exists(title):
+    """
+    Check if an encyclopedia with the title exists or not.
+    
+    :returns: true if exists, otherwise false
+    """
+    try:
+        f = default_storage.open(f"entries/{title}.md")
+        return True
+
+    except FileNotFoundError:
+        return False
+
+
 def get_entry(title):
     """
     Retrieves an encyclopedia entry by its title. If no such
