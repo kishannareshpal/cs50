@@ -17,7 +17,7 @@ View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
 :white_check_mark: View email content.
 :white_check_mark: Archive and Unarchive.
 :white_check_mark: Reply to an email.
-:white_check_mark: Make HTTP request to the API using JavaScript.
+:white_check_mark: Make HTTP request to the given API using JavaScript.
 
 ## How To Build and Run
 1. Clone this repo.
@@ -57,4 +57,4 @@ View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
 8. Navigate to the URL provided by the command above and you should be redirected to the Home page! ✅
 
 ## Usage
-Please see the demo linked on top.
+Please see the demo video linked on top.
