@@ -12,11 +12,11 @@ View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
 - [Bootstrap (vers. 5.0.0-beta1)](https://getbootstrap.com)
 
 #### Project requirements
-:white_check_mark: Send emails.
-:white_check_mark: Mailboxes (Inbox, Sent or Archive).
-:white_check_mark: View email content.
-:white_check_mark: Archive and Unarchive.
-:white_check_mark: Reply to an email.
+:white_check_mark: Send emails.<br>
+:white_check_mark: Mailboxes (Inbox, Sent or Archive).<br>
+:white_check_mark: View email content.<br>
+:white_check_mark: Archive and Unarchive.<br>
+:white_check_mark: Reply to an email.<br>
 :white_check_mark: Make HTTP request to the given API using JavaScript.
 
 ## How To Build and Run
