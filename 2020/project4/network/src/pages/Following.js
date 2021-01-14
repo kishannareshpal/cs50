@@ -66,7 +66,7 @@ const Following = (props) => {
         <div>
             <h1 className="font-weight-bolder mb-0">Posts from people you follow</h1>
             <p>{postscount} {pluralize("posts", postscount)}</p>
-            { isUserLoggedIn &&
+            { !isUserLoggedIn &&
                 <p className="mt-0">You need to <a href="/login">login</a> in order to see this page</p>
             }
             <hr/>
