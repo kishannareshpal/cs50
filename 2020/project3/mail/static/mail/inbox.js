@@ -290,7 +290,7 @@ function formatDate(timestamp) {
     const time = new Date(timestamp);
     const today = new Date();
 
-    const month = months[time.getMonth() - 1];
+    const month = months[time.getMonth()];
     const date = time.getDate();
     const year = time.getFullYear();
     const hour = (time.getHours() < 10 ? '0' : '') + time.getHours();
