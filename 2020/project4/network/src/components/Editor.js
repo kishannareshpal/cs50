@@ -47,7 +47,7 @@ const Editor = ({ onPost, currentUserUsername }) => {
 
         } else {
             // Body is empty
-            toast.dark(<strong>"✍️ Please write something to post"</strong>)
+            toast.dark(<strong>✍️ Please write something to post</strong>)
         }
     }
 
