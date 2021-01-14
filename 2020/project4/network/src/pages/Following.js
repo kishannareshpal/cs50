@@ -41,13 +41,22 @@ const Following = (props) => {
         setLoading(true);
         const url = `/api/posts/followings?page=${currentpage}`
         fetch(url)
-            .then(response => response.json())
             .then(res => {
-                setPosts(res.data)
-                setLinks(res.links)
-                setPostsCount(res.meta.count)
-                setLoading(false)
-                console.log("Posts from people currentUser follows", posts)
+                const { status } = res;
+                if (status == 200) {
+                    // Updated!
+                    res.json().then(({data, links, meta}) => {
+                        setPosts(data)
+                        setLinks(links)
+                        setPostsCount(meta.count)
+                        setLoading(false)
+                        console.log("Posts from people currentUser follows", posts)
+                    })
+    
+                } else if (status == 401) {
+                    // Forbidden!
+                    setLoading(false)
+                }
             })
 
     }, [currentpage])
@@ -57,6 +66,9 @@ const Following = (props) => {
         <div>
             <h1 className="font-weight-bolder mb-0">Posts from people you follow</h1>
             <p>{postscount} {pluralize("posts", postscount)}</p>
+            { isUserLoggedIn &&
+                <p className="mt-0">You need to <a href="/login">login</a> in order to see this page</p>
+            }
             <hr/>
 
             {posts.length > 0 ? (
@@ -74,7 +86,7 @@ const Following = (props) => {
                 </div>
             
             ) : (
-                // No posts by the use.
+                // No posts by the user.
                 <div className="text-muted" role="alert">
                     <h3 className="mt-4">No posts to show</h3>
                 </div>

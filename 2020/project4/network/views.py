@@ -145,6 +145,16 @@ def posts_followings(request):
             status=405
         )
 
+    if not request.user.is_authenticated:
+        # User is not authenticated. Abort.
+        return JsonResponse(
+            {
+                "message": "Unauthorized",
+                "data": None
+            }, 
+            status=401
+        )
+
     # Grab all the posts on which the author (user) has the current user as it's follower.
     posts = Post.objects.filter(user__followers__follower__id=request.user.id).order_by("-timestamp").all()
     serialized_posts = [post.serialize() for post in posts]
