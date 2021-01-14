@@ -68,7 +68,7 @@ Because the api documentation is a bit big, I moved it into a separate file to k
   npm run dev
 
   # Or watch (recommended for development):
-  npm run watch
+  npm run dev-watch
 ```
 
 8. Make database migrations:
