@@ -180,6 +180,7 @@ function load_email(email_id, from_mailbox) {
                     showRecipients.innerHTML += recipientEmail;
                 }
             })
+            document.querySelector("#show-timestamp").innerText = `${from_mailbox == "sent" ? "Sent" : "Received"} ${formatDate(email.timestamp)}`
             document.querySelector("#show-subject").innerHTML = email.subject;
             document.querySelector("#show-body").innerHTML = marked(email.body);
 
