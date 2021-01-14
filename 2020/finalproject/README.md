@@ -155,7 +155,7 @@ When the user opens the index page (`/`), he will be presented with the Home Pag
 #### Home page – /
 ![Home page](docs/home.png)
 
-The home page contains a quick way to book an appoitment, displays the location of the shop using the [embeded Google Maps](https://support.google.com/maps/answer/144361?co=GENIE.Platform%3DDesktop&hl=en#:~:text=Embed%20a%20map%20or%20directions&text=the%20embedded%20map.-,Open%20Google%20Maps.,Click%20Embed%20map.) which is interactive. Next it shows a table listing the opening times, and just bellow some contact informations with quick links.
+The home page contains a quick way to book an appointment, displays the location of the shop using the [embeded Google Maps](https://support.google.com/maps/answer/144361?co=GENIE.Platform%3DDesktop&hl=en#:~:text=Embed%20a%20map%20or%20directions&text=the%20embedded%20map.-,Open%20Google%20Maps.,Click%20Embed%20map.) which is interactive. Next it shows a table listing the opening times, and just bellow some contact informations with quick links.
 
 By entering their email into the input at the top, the user will be automatically redirected to the login page (if they have an account), otherwise to the account registration page. It is also possible to get to the session page via the login button in the navigation bar on top.
 
