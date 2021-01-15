@@ -290,7 +290,7 @@ function crateEmailListItemElement(email, mailbox) {
         emailAndTimeRowDiv.appendChild(col0);
     }
     const col1 = document.createElement("div");
-    col1.classList.add("col", "text-truncate");
+    col1.classList.add("col");
     col1.appendChild(emailP)
     const col2 = document.createElement("div");
     col2.classList.add("col", "col-auto");
