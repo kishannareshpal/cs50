@@ -170,16 +170,7 @@ function load_email(email_id, from_mailbox) {
         .then(email => {
             // Present the email content
             document.querySelector("#show-from").innerText = email.sender
-            const showRecipients = document.querySelector("#show-recipients");
-            showRecipients.innerHTML = "to ";
-            email.recipients.forEach(recipientEmail => {
-                const myEmail = document.querySelector("#me").dataset.myEmail;
-                if (myEmail == recipientEmail) {
-                    showRecipients.innerHTML += "me";
-                } else {
-                    showRecipients.innerHTML += recipientEmail;
-                }
-            })
+            document.querySelector("#show-recipients").innerText = formatRecipients(email.recipients);
             document.querySelector("#show-timestamp").innerText = `${from_mailbox == "sent" ? "Sent" : "Received"} ${formatDate(email.timestamp)}`
             document.querySelector("#show-subject").innerHTML = email.subject;
             document.querySelector("#show-body").innerHTML = marked(email.body);
@@ -214,6 +205,41 @@ function load_email(email_id, from_mailbox) {
 }
 
 
+/**
+ * Basically transform the array of recipients into a comma separated string.
+ * Also replaces own email with "me"!
+ * 
+ * @param {Array} recipients the list of recipients
+ * @returns comma separated string of elements in the array. Replaces current user's email with "me".
+ * 
+ * @example
+ * const recipients1 = ["kishan[at]live.com", "steve[at]gmail.com"]
+ * const recipients2 = ["bob[at]gmail.com", "kishan[at]live.com", "steve[at]gmail.com"]
+ * formatRecipients(recipients1, ownEmail);
+ * formatRecipients(recipients2, ownEmail);
+ * // returns:
+ * // "to: me, steve[at]gmail.com"
+ * // "to: bob[at]gmail.com, me, steve[at]gmail.com"
+ */
+function formatRecipients(recipients) {
+    const ownEmail = document.querySelector("#me").dataset.myEmail;
+    let formatedRecps = "to ";
+    recipients.forEach((recipientEmail, index) => {
+        if (ownEmail == recipientEmail) {
+            formatedRecps += "me";
+
+        } else {
+            formatedRecps += `${recipientEmail}`;
+        }
+
+        if (index < recipients.length - 1) {
+            formatedRecps += ", " // separate every two elements with a comma and a space.
+        }
+    })
+    return formatedRecps;
+}
+
+
 function crateEmailListItemElement(email, mailbox) {
     /**
      * <li>
@@ -242,7 +268,13 @@ function crateEmailListItemElement(email, mailbox) {
     } else {
         emailP.classList.add("text-muted")
     }
-    emailP.textContent = email.sender;
+
+
+    if (mailbox == "sent") {
+        emailP.textContent = formatRecipients(email.recipients);
+    } else {
+        emailP.textContent = email.sender;
+    }
 
     const timeSmall = document.createElement("small");
     timeSmall.title = email.timestamp;
