@@ -14,15 +14,14 @@
 
 
 ### GATO: The barbershop
-For this project I've designed and implemented a dynamic website of my own, drawing upon all of the course’s lessons and my own understandings.
-As we are transcending more and more to an online world due to the pandemic we are currently facing since 2019, it is very important that we all follow the social distancing guides provided by our Government.
+For the final project I've designed and implemented a dynamic website of my own, drawing upon all of the course’s lessons and my own understandings.
 
 #### Motivation
 Before the pandemic hit, whenever we needed to go for a haircut, we would go to the shop and if all barbers were busy we would need to wait until our opportunity came. Imagine this shop full of people waiting. Nowadays this is very risky of contamination because of the shop's limited size, as this means that we all stay very close to one another waiting in cues inside the shop just because we don't want to lose our turns.
 
 With this app, anyone can book a service (e.g: haircut) that this barbershop offers right from the comfort of their own house or wherever they are, for any day and time of that day. And just like that, we prevent big cues and we know exactly at what to time to arrive for our turn.
 
-View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
+View the app demo: https://youtu.be/HX1vCRPW4lk
 
 
 #### Technologies used:
