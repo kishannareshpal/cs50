@@ -3,7 +3,7 @@
 ### Mail
 For this project I've designed and implemented a dynamic Email client website using the technologies learned from the first seven lectures.
 
-View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
+View the app demo: https://youtu.be/g3TOsbDMaN4
 
 #### Technologies used:
 - [Python (vers. 3.9.1)](https://python.org)
