@@ -3,7 +3,7 @@
 ### Wiki
 For this project I've designed and implemented a dynamic [Wikipedia](https://wikipedia.org)-like online encyclopedia website using the technologies learned from the first four lectures.
 
-View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
+View the app demo: https://youtu.be/AAwI3Y-VWgo
 
 #### Technologies used:
 - [Python (vers. 3.9.1)](https://python.org)
