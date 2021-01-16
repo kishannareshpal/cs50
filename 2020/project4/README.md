@@ -3,7 +3,7 @@
 ### Network
 For this project I've designed and implemented a dynamic [Twitter](htps://twitter.com)-like social network for making posts and following users
 
-View the app demo: <mark>INSERT YOUTUBE LINK HERE</mark>
+View the app demo: https://youtu.be/hRxhU3_VJK4
 
 #### Technologies used:
 - [Python (vers. 3.9.1)](https://python.org)
@@ -90,3 +90,4 @@ Because the api documentation is a bit big, I moved it into a separate file to k
 
 ## Usage
 Please see the demo video linked on top.
+
