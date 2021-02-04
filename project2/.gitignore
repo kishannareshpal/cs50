@@ -1,6 +1,0 @@
-.env
-**/__pycache__/
-static/css
-flask_session
-**/.DS_Store
-.vscode

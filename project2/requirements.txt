@@ -1,5 +1,0 @@
-Flask
-Flask-SocketIO
-python-dotenv
-Flask-WTF
-WTForms
