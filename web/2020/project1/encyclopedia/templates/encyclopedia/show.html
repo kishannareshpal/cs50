@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent px-0">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        </ol>
+        <div class="text-right">
+            <a class="font-weight-bold text-warning" style="text-decoration: underline;" href="{% url 'editwiki' title %}"><i class="fas fa-pen mr-2"></i>Edit this page</a>
+            <span class="mx-2">|</span>
+            <a class="font-weight-bold text-danger" style="text-decoration: underline;" href="{% url 'deletewiki' title %}"><i class="fas fa-trash mr-2"></i>Delete</a>
+        </div>
+        <hr>
+    </nav>
+
+    <p>
+        {{ content|safe }}
+    </p>
+{% endblock %}

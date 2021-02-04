@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+<!-- head styles -->
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+<!-- page title -->
+{% block title %}
+    Login
+{% endblock %}
+
+<!-- page body -->
+{% block body %}
+    <section class="container mt-5">
+        <h3>Welcome again!</h3>
+        <p class="mb-4">Login by entering your information bellow</p>
+
+        <div>
+            <form action="{{ url_for('home.login') }}" method="post">
+                <div class="b-textinput {% if errors and errors['invalid'] %} is-invalid {% endif %}">
+                    <label>Username or Email</label>
+                    <input type="text" name="username_or_email">
+                    {% if errors and errors['invalid'] %}
+                    <p>{{ errors['invalid'] }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="b-textinput">
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Continue</button>
+            </form>
+            <p class="mt-4">Don't have an account? <a href="{{ url_for('home.register') }}" class="font-weight-bold">Create one here</a></p>
+        </div>
+    </section>
+{% endblock %}

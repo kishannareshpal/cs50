@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/9e6a52621a.js" crossorigin="anonymous"></script>
+        <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sidebar col-md-3 col-lg-3 col-12">
+                    <h2>
+                        <a href="{% url 'index' %}" class="text-reset text-decoration-none"><strong>📕 Wiki</strong></a>
+                    </h2>
+                    <form action="{% url 'search' %}">
+                        <div class="search form-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search Encyclopedia" value="{% if q %}{{ q }}{% endif %}">
+                            <small class="form-text text-muted">Type any word and press enter ⮐ to lookup</small>
+                        </div>
+                    </form>
+
+                    <div class="mt-5">
+                        <a href="{% url 'index' %}" class="py-2 rounded-lg d-block text-left btn btn-link btn-menu-item {% if activemenu == 'index' %} active {% endif %} text-reset text-decoration-none font-weight-bold">
+                            <i class="fas fa-home pr-2"></i>
+                            Home
+                        </a>
+
+                        <a href="{% url 'submit' %}" class="mt-2 py-2 rounded-lg d-block text-left btn btn-link btn-menu-item {% if activemenu == 'submit' %} active {% endif %} text-reset text-decoration-none font-weight-bold">
+                            <i class="fas fa-plus pr-2"></i>
+                            Create New Page
+                        </a>
+
+                        <hr>
+
+                        <a href="{% url 'random' %}" class="mt-2 py-2 rounded-lg d-block text-left btn btn-link btn-menu-item text-reset text-decoration-none font-weight-bold">
+                            <i class="fas fa-random pr-2"></i>
+                            Random Page
+                        </a>
+
+                        <a href="{% url 'drafts' %}" class="mt-2 py-2 rounded-lg d-block text-left btn btn-link btn-menu-item {% if activemenu == 'drafts' %} active {% endif %} text-reset text-decoration-none font-weight-bold">
+                            <i class="fas fa-archive pr-2"></i>
+                            Drafts
+                        </a>
+                    </div>
+
+                    {% block nav %}
+                    {% endblock %}
+                </div>
+                <div class="main col-md-8 container">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

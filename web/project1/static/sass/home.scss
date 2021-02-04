@@ -1,0 +1,16 @@
+
+// Home
+@import "common";
+@import "./components/nav";
+@import "./components/pagination";
+
+
+
+.b-card-link {
+    color: black !important;
+
+    &:hover {
+        text-decoration: none;
+        background-color: darken($color: white, $amount: 3)
+    }
+}

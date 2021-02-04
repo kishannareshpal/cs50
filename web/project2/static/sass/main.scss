@@ -1,0 +1,442 @@
+@import "./bootstrap/bootstrap";
+@import "./components/variables";
+@import "./components/buttons";
+@import "./components/inputs";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    // font-family: 'Quicksand', 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    &.c-styled {
+        font-family: 'Inter', sans-serif;
+    }
+    font-weight: 700 !important;
+}
+
+
+
+.icon {
+    color: $primary;
+    animation: peek 300ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+}
+
+@keyframes peek {
+    0% {
+        transform: scale(1.3);
+        transform: rotate(20deg);
+    }
+
+    23% {
+        transform: scale(1.4);
+        transform: rotate(32deg);
+    }
+
+    90% {
+        transform: scale(1.2);
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform: scale(1);
+
+    }
+}
+
+// Sizes vars
+$sidebar-width: 300px;
+
+
+// My classes
+.sidebar {
+    @extend .sticky-top;
+    max-height: 100vh;
+    max-width: 100%;
+    width: $sidebar-width;
+    border-right: 2px solid $lightgrey;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: white;
+
+    // For the labels
+    label {
+        font-size: small;
+        font-weight: bold;
+        color: $grey;
+    }
+
+    // For the list of channels
+    .channels-list {
+        overflow-y: scroll;
+        word-break: break-all;
+
+        // For individual item in the list of channel.
+        .channel-list-item {
+            padding: 6px 18px;
+            margin-bottom: 4px;
+            width: fit-content;
+            white-space: nowrap;
+            display: inline-block;
+            border-radius: 50rem;
+            text-decoration: none;
+            transition-duration: 250ms;
+            font-weight: bold;
+            color: black;
+
+            &:hover {
+                background-color: transparentize($color: $primary, $amount: 0.9);
+                color: $primary;
+            }
+
+            &.active {
+                color: $primary !important;
+                background-color: transparentize($color: $primary, $amount: 0.8);
+            }
+
+        } 
+    }
+
+
+    #displayname {
+        text-overflow: ellipsis;
+        // overflow: hidden;
+        white-space: nowrap;
+    }
+
+}
+
+
+
+.main {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    // The topbar, where the chat title appears
+    #topbar {
+        background-color: #ffffffde;
+        /* Add the blur effect */
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    ul {
+        position: relative;
+        bottom: 0;
+    }
+
+    #bottombar {
+        background-color: #ffffffde;
+        /* Add the blur effect */
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        position: sticky !important;
+        bottom: 0;
+    }
+}
+
+
+
+.c-modal {
+    border-radius: 14px;
+
+    p.title {
+        font-size: 19px;
+        overflow-wrap: break-word;
+    }
+
+    p.message {
+        color: rgb(101, 119, 134);
+        overflow-wrap: break-word;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.bg-color {
+    &--primary {
+        background-color: $primary !important;
+    }
+
+    &--lighgrey {
+        background-color: $lightgrey !important;
+    }
+
+    &--secondary {
+        background-color: $secondary !important;
+    }
+
+    &--grey {
+        background-color: $grey !important;
+    }
+}
+
+.text-color {
+    &--primary {
+        color: $primary !important;
+    }
+
+    &--lighgrey {
+        color: $lightgrey !important;
+    }
+
+    &--secondary {
+        color: $secondary !important;
+    }
+
+    &--grey {
+        color: $grey !important;
+    }
+}
+
+
+// My textinput
+div.c-textinput {
+    display: block;
+    border: 2px solid darken($color: $primary, $amount: 6);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    width: 400px;
+    max-width: 100%;
+
+    label {
+        font-weight: 600;
+        color: lighten($color: $primary, $amount: 5);
+        font-size: small;
+        display: block;
+        margin: 8px 18px 2px 18px;
+        padding: 0;
+    }
+
+    input {
+        width: 100%;
+        padding: 2px 18px 0px 18px;
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    p {
+        display: none;
+        width: 100%;
+        font-size: small;
+        padding: 0 18px 8px 18px;
+        margin: 0;
+    }
+
+
+    // styling invalid input mode
+    &.is-invalid {
+        border-color: $red;
+        label {
+            color: $red !important;
+
+            &::before {
+                content: "⚠︎ ";
+            }
+        }
+
+        p {
+            display: block;
+            color: lighten($color: $red, $amount: 10);
+        }
+    }
+
+    // styling invalid input mode
+    &.is-success {
+        border-color: $green;
+        label {
+            color: $green !important;
+
+            &::before {
+                content: "✓ ";
+            }
+        }
+
+        p {
+            display: block;
+            color: lighten($color: $green, $amount: 10);
+        }
+    }
+}
+
+// My Message input
+.c-message-input {
+    border: none;
+    padding: 12px 32px;
+    box-shadow: 0 0 4px darken($color: white, $amount: 10);
+    transition-duration: 300ms;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 12px darken($color: white, $amount: 10);
+    }
+}
+
+// Bootstrap button with the primary color
+.c-btn-primary {
+    @extend .btn;
+    @include button-variant($primary, $primary);
+}
+
+
+// Conversation
+ul.c-conversation-ul {
+    list-style: none;
+
+
+    .--date {
+        text-align: center;
+        font-weight: bold;
+
+        p {
+            display: inline-block;
+        }
+    }
+
+
+    .--us {
+        display: inline-block;
+        padding: 8px 14px;
+        margin-bottom: 8px;
+        width: fit-content;
+        max-width: 340px;
+        overflow-wrap: break-word;
+    }
+
+    .--me {
+        @extend .float-right;
+        @extend .--us;
+        // @extend .rounded-pill;
+        background: $primary; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, $primary, #0575E6); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, $primary, #0575E6); 
+
+        color: white;
+        right: 0;
+        border-radius: 12px 0 12px 12px;
+        text-align: start;
+        // border-top-right-radius: 0 !important;
+        margin-left: 24px;
+
+        .user {
+            margin-bottom: 0;
+            color: lighten($color: $primary, $amount: 35);
+            font-weight: normal;
+            font-size: smaller;
+        }
+
+        .text {
+            margin: 2px 0 2px 0;
+        }
+        
+        .info {
+            margin: 0;
+            text-align: end;
+            font-size: smaller; 
+            color: lighten($color: $primary, $amount: 35);
+        }
+    }
+
+    .--they {
+        @extend .float-left;
+        @extend .--us;
+        @extend .shadow-sm;
+        background-color: $lightgrey;
+        border-radius: 12px 12px 12px 0;
+        margin-right: 24px;
+
+        .user {
+            margin: 0;
+            color: darken($color: $lightgrey, $amount: 35);
+            font-weight: normal;
+            font-size: smaller;
+        }
+
+        .text {
+            margin: 2px 0 2px 0;
+        }
+
+        .info {
+            margin: 0;
+            font-size: smaller; 
+            color: darken($color: $lightgrey, $amount: 35);
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@include media-breakpoint-down(md) { 
+    .sidebar {
+        display: none;
+
+        &.shown-on-mobile {
+            max-width: 100%;
+            padding-left: 12px;
+            padding-right: 12px;
+            display: unset;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            box-shadow:0 0 0 100vw rgba(0,0,0,0.65);/* dark around it */
+            animation-fill-mode: forwards;
+            animation-name: slideIn;
+            animation-duration: 240ms;
+            // display: block !important;
+            z-index: 1039;
+        }
+
+        &.hidden-on-mobile {
+            display: none;
+            animation-fill-mode: forwards;
+            animation-name: slideOut;
+            animation-duration: 240ms;
+            // display: block !important;
+            z-index: 1039;
+        }
+    }
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-264px);
+    }
+
+    100% {
+        transform: translateX(0);
+        display: none;
+    }
+}
+
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-264px);
+        display: none;
+    }
+}

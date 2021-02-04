@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://kit.fontawesome.com/9e6a52621a.js" crossorigin="anonymous"></script>
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <nav class="b-topbar">
+        <div class="row">
+            <div class="col-6">
+                <div>
+                    <a class="b-nav-title navbar-brand" style="text-decoration: inherit;" href="{{ url_for('home.index') }}">
+                        <i class="fas fa-book"></i>
+                        Books
+                    </a>
+                </div>
+            </div>
+
+            {% if user %}
+                <div class="col-6 text-right">
+                    <a href="{{ url_for('home.logout') }}" class="btn btn-danger rounded-pill ml-2"><i class="fa fa-sign-out-alt mr-2"></i>Log out</a>
+                </div>
+            {% else %}
+                <div class="col-6">
+                    <div class="d-flex justify-content-end align-items-center h-100 flex-row">
+                        {% if not request.endpoint in ("home.login", "home.register") %}
+                        <div class="mr-4">
+                            <a href="{{ url_for('home.login') }}" class="b-nav-item">Login</a>
+                        </div>
+                        <div>
+                            <a href="{{ url_for('home.register') }}" class="b-nav-item">Register</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </nav>
+
+    {% block body %}{% endblock %}
+</body>
+</html>

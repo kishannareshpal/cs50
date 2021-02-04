@@ -1,0 +1,15 @@
+// Pagination
+
+nav {
+    ul.pagination {
+        li.page-item a {
+            @extend .red-text;
+        }
+
+        li.page-item.active a {
+            background-color: $orange ;
+            border-color: $orange;
+            color: white;
+        }
+    }
+}

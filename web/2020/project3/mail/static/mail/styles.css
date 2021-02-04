@@ -1,0 +1,14 @@
+textarea {
+    min-height: 400px;
+}
+
+.unread-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+
+.is-read {
+    background-color: #f2f5f5cc;
+}

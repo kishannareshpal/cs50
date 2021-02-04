@@ -1,0 +1,34 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:compile": "node-sass ./network/static/network/styles.scss ./network/static/network/styles.css",
+    "sass:watch": "node-sass --watch ./network/static/network/styles.scss ./network/static/network/styles.css",
+    "dev-watch": "webpack --mode development --entry ./network/src/index.js -o ./network/static/network --watch",
+    "dev": "webpack --mode development --entry ./network/src/index.js -o ./network/static/network",
+    "build": "webpack --mode production --entry ./network/src/index.js -o ./network/static/network"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "node-sass": "^5.0.0",
+    "webpack": "^5.5.1",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "pluralize": "^8.0.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.13.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^6.2.0"
+  }
+}

@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background-color: #FFFFFF; }
+
+.sidebar {
+  background-color: #F7F6F1;
+  height: 100vh;
+  padding: 32px; }
+  .sidebar .search {
+    margin-top: 24px; }
+  .sidebar .btn-menu-item.active {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .sidebar .btn-menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.main {
+  padding: 32px;
+  color: black; }
+
+.wiki.card {
+  animation: out 200ms;
+  animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1); }
+  .wiki.card:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    transition-duration: 200ms;
+    animation: in 200ms;
+    animation-fill-mode: forwards;
+    color: #D7545C; }
+
+.draft.card:hover {
+  background-color: rgba(0, 0, 0, 0.06); }
+
+@keyframes in {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.06); } }
+
+@keyframes out {
+  from {
+    transform: scale(1.06); }
+  to {
+    transform: scale(1); } }
+
+code {
+  white-space: pre; }
+
+textarea {
+  height: 90vh;
+  width: 80%; }
+
+.in-draft {
+  display: inline-block;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 8px; }
