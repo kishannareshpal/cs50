@@ -28,4 +28,4 @@ Play it now at [https://scratch.mit.edu/projects/483560238/](https://scratch.mit
 
 #### Contributing
 
-To open `📄 theparkinggame.sb3` file simply go to [https://scratch.mit.edu], **Create** a new project, click on **File** and select **Load from your computer**. Once prompted by your computer, choose the `*.sb3`.
+To open `📄 theparkinggame.sb3` file simply go to [https://scratch.mit.edu](https://scratch.mit.edu), **Create** a new project, click on **File** and select **Load from your computer**. Once prompted by your computer, choose the `*.sb3`.
