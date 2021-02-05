@@ -1,10 +1,10 @@
-# Problem Set 0
+# [Week 0](../) / Problem Set 0
 
 ### The parking game
 
 For this project I've made a parking game using the visual programming langugage [Scratch](https://scratch.mit.edu).
 
-Play it now at [https://scratch.mit.edu/projects/483560238/](https://scratch.mit.edu/projects/483560238/)
+Play it now at on your computer [https://scratch.mit.edu/projects/483560238/](https://scratch.mit.edu/projects/483560238/)
 
 <img alt="Main Menu" src="screenshots/mainmenu.png" width="756px">\
 <img alt="Playing" src="screenshots/playing.png" width="756px">
@@ -15,7 +15,7 @@ Play it now at [https://scratch.mit.edu/projects/483560238/](https://scratch.mit
 - [Scratch – The visual programming language](https://scratch.mit.edu)
 
 
-#### Project Requirements
+#### Requirements
 
 :white_check_mark: Must have at least two sprites, at least one of which must resemble something other than a cat.\
 :white_check_mark: Must have at least three scripts total (i.e., not necessarily three per sprite).\
