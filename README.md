@@ -9,8 +9,9 @@ This repo holds all my submited projects and problem sets of these two courses (
 ### CS50x – Introduction to Computer Science
 Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web programming. Languages include C, Python, and SQL plus HTML, CSS, and JavaScript. Problem sets inspired by the arts, humanities, social sciences, and sciences. Course culminates in a final project (which I have pushed to this repo).
 
-##### Projects
-- :zero: [Scratch – The Parking game](./x/pset0/)
+##### Weeks
+- :zero: [Week 0: Scratch](./x/week0/)
+- :one: [Week 1: C](./x/week1/)
 
 
 ### CS50w – Web Programming with Python and JavaScript
