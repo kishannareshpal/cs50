@@ -11,7 +11,7 @@ Toward the beginning of World 1-1 in Nintendo’s Super Mario Brothers, Mario mu
 
 
 ##### Requirements
-:white_check_mark: Must allow the user to decide just how tall the pyramid by prompting them for a positive integer between, 1 and 8, inclusive. Re-prompt the user if user inputs something different until they cooperate.\
+:white_check_mark: Must allow the user to decide just how tall the pyramid should be by prompting them for a positive integer between, 1 and 8, inclusive. Re-prompt the user if user inputs something different until they cooperate.\
 :white_check_mark: Width of the “gap” between adjacent pyramids is equal to the width of two hashes, irrespective of the pyramid's heights.
 
 
