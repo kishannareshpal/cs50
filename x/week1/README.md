@@ -1,4 +1,4 @@
-# [X](../../README.md) / Week 1: C
+# [X](../../README.md#weeks) / Week 1: C
 
 #### Labs:
 
