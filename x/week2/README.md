@@ -1,4 +1,4 @@
-# [X](../../) / Week 2: Arrays
+# [X](../../README.md) / Week 2: Arrays
 
 #### Labs:
 
