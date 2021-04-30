@@ -1,4 +1,4 @@
-# [Week 1](../) / Problem Set 1
+# [Week 1](../../) / Problem Set 1
 
 ### Cash (Greedy Algorithms)
 
@@ -7,15 +7,14 @@ Think of a “greedy” cashier as one who wants to take the biggest bite out of
 
 Assume only coins available are quarters (`25¢`), dimes (`10¢`), nickels (`5¢`), and pennies (`1¢`).
 
-
 ##### Requirements
+
 :white_check_mark: Get user input asking for change using `get_float`.\
 :white_check_mark: If the user fails to provide a non-negative value, re-prompt the user for a valid amount again and again until the user complies.\
 :white_check_mark: Take care to round your cents to the nearest penny, as with round, which is declared in math.h. For instance, if dollars is a float with the user’s input (e.g., `0.20` or even `0.200000002980232238769531250`) will safely convert to `20`.
 
-
-
 ##### Examples
+
 ```
 $ ./cash
 Change: 0.41
@@ -29,6 +28,7 @@ Change: 23
 ```
 
 ##### Usage
+
 ```bash
 # Compile
 $ make cash.c

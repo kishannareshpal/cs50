@@ -9,11 +9,10 @@ Play it now at on your computer [https://scratch.mit.edu/projects/483560238/](ht
 <img alt="Main Menu" src="screenshots/mainmenu.png" width="756px">\
 <img alt="Playing" src="screenshots/playing.png" width="756px">
 
-
 #### Technologies Used
-- [Google Chrome](https://chrome.google.com)
-- [Scratch – The visual programming language](https://scratch.mit.edu)
 
+-   [Google Chrome](https://chrome.google.com)
+-   [Scratch – The visual programming language](https://scratch.mit.edu)
 
 #### Requirements
 
@@ -24,7 +23,6 @@ Play it now at on your computer [https://scratch.mit.edu/projects/483560238/](ht
 :white_check_mark: Must use at least one variable.\
 :white_check_mark: Must use at least one sound.\
 :white_check_mark: Should be more complex than most of those demonstrated in lecture (many of which, though instructive, were quite short) but it can be less complex than [Ivy’s Hardest Game](https://scratch.mit.edu/projects/326129587/). As such, this project should probably use a few dozen puzzle pieces overall.
-
 
 #### Contributing
 
