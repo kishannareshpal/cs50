@@ -40,3 +40,12 @@ Player 2 wins! # Output: The player with the most points, wins.
     -   :white_check_mark: Though Scrabble rules normally require that a word be in the dictionary, no need to check for that in this problem!
 
 -   :white_check_mark: Finally, print depending on the player's scores, `Player 1 wins!`, `Player 2 wins!`, or `Tie!`.
+
+##### Usage
+
+```bash
+# Compile
+$ make scrabble.c
+# Execute
+$ ./scrabble
+```
