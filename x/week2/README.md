@@ -1,4 +1,4 @@
-# Week 2: Arrays
+# [X](../../) / Week 2: Arrays
 
 #### Labs:
 

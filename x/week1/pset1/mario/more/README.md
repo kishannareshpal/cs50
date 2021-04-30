@@ -1,4 +1,4 @@
-# [Week 1](../../) / Problem Set 1
+# [Week 1](../../../) / Problem Set 1
 
 ### Mario (More comfortable)
 

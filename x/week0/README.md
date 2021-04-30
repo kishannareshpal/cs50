@@ -1,7 +1,9 @@
-# Week 0: Scratch
+# [X](../../) / Week 0: Scratch
 
 #### Labs:
-- **N/A**
+
+-   **N/A**
 
 #### Problem Set:
-- :zero: [The Parking game](./pset0/)
+
+-   :zero: [The Parking game](./pset0/)
