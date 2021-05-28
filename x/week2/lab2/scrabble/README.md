@@ -32,14 +32,14 @@ Player 2 wins! # Output: The player with the most points, wins.
 
 ##### Requirements
 
--   :white_check_mark: Prompt each player for their word, storing them inside `word1` and `word2` named variables.
--   :white_check_mark: The score should be computed using the `POINTS` array and returned for the string arguments.
--   :white_check_mark: Characters that are not letters should be given zero points, and uppercase and lowercase letters should be given the same point values.
+-   :white_check_mark: Prompt each player for their word, storing them inside `word1` and `word2` named variables.\
+-   :white_check_mark: The score should be computed using the `POINTS` array and returned for the string arguments.\
+-   :white_check_mark: Characters that are not letters should be given zero points, and uppercase and lowercase letters should be given the same point values.\
 
-    -   :white_check_mark: `!` is worth `0` points while `A` and `a` are both worth `1` point.
-    -   :white_check_mark: Though Scrabble rules normally require that a word be in the dictionary, no need to check for that in this problem!
+    -   :white_check_mark: `!` is worth `0` points while `A` and `a` are both worth `1` point.\
+    -   :white_check_mark: Though Scrabble rules normally require that a word be in the dictionary, no need to check for that in this problem!\
 
--   :white_check_mark: Finally, print depending on the player's scores, `Player 1 wins!`, `Player 2 wins!`, or `Tie!`.
+-   :white_check_mark: Finally, print depending on the player's scores, `Player 1 wins!`, `Player 2 wins!`, or `Tie!`.\
 
 ##### Usage
 

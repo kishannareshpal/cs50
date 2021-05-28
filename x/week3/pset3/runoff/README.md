@@ -8,51 +8,45 @@ A program that runs a [Runoff election](https://en.wikipedia.org/wiki/Instant-ru
 
 ##### Requirements
 
-Complete the implementation of `runoff.c` in such a way that it simulates a runoff election. You should complete the implementations of the `vote`, `tabulate`, `print_winner`, `find_min`, `is_tie`, and `eliminate` functions, and you should not modify anything else in `runoff.c` (and the inclusion of additional header files, if you’d like).
+Complete the implementation of `runoff.c` in such a way that it simulates a runoff election. You should complete the implementations of the `vote`, `tabulate`, `print_winner`, `find_min`, `is_tie`, and `eliminate` functions, and you should not modify anything else in `runoff.c` (and the inclusion of additional header files, if you’d like).\
 
 :white_check_mark: Must handle:
 
--   An election with any number of candidate (up to the `MAX` of `9`)
--   Voting for a candidate by name
--   Invalid votes for candidates who are not on the ballot
--   Printing the winner of the election if there is only one
--   Not eliminating anyone in the case of a tie between all remaining candidates
+-   An election with any number of candidate (up to the `MAX` of `9`)\
+-   Voting for a candidate by name\
+-   Invalid votes for candidates who are not on the ballot\
+-   Printing the winner of the election if there is only one\
+-   Not eliminating anyone in the case of a tie between all remaining candidates\
 
-**`vote`**
 :white_check_mark: Complete the `vote` function.
 
--   The function takes arguments `voter`, `rank`, and `name`. If `name` is a match for the name of a valid candidate, then you should update the global preferences array to indicate that the voter `voter` has that candidate as their `rank` preference (where `0` is the first preference, `1` is the second preference, etc.).
--   If the preference is successfully recorded, the function should return `true`; the function should return `false` otherwise (if, for instance, `name` is not the name of one of the candidates).
--   You may assume that no two candidates will have the same name.
+-   The function takes arguments `voter`, `rank`, and `name`. If `name` is a match for the name of a valid candidate, then you should update the global preferences array to indicate that the voter `voter` has that candidate as their `rank` preference (where `0` is the first preference, `1` is the second preference, etc.).\
+-   If the preference is successfully recorded, the function should return `true`; the function should return `false` otherwise (if, for instance, `name` is not the name of one of the candidates).\
+-   You may assume that no two candidates will have the same name.\
 
-**`tabulate`**
 :white_check_mark: Complete the `tabulate` function.
 
--   The function should update the number of `votes` each candidate has at this stage in the runoff.
--   Recall that at each stage in the runoff, every voter effectively votes for their top-preferred candidate who has not already been eliminated.
+-   The function should update the number of `votes` each candidate has at this stage in the runoff.\
+-   Recall that at each stage in the runoff, every voter effectively votes for their top-preferred candidate who has not already been eliminated.\
 
-**`print_winner`**
 :white_check_mark: Complete the `print_winner` function.
 
--   If any candidate has more than half of the vote, their name should be printed to `stdout` and the function should return `true`.
--   If nobody has won the election yet, the function should return `false`.
+-   If any candidate has more than half of the vote, their name should be printed to `stdout` and the function should return `true`.\
+-   If nobody has won the election yet, the function should return `false`.\
 
-**`find_min`**
 :white_check_mark: Complete the `find_min` function.
 
--   The function should return the minimum vote total for any candidate who is still in the election.
+-   The function should return the minimum vote total for any candidate who is still in the election.\
 
-**`is_tie`**
 :white_check_mark: Complete the `is_tie` function.
 
--   The function takes an argument `min`, which will be the minimum number of votes that anyone in the election currently has.
--   The function should return `true` if every candidate remaining in the election has the same number of votes, and should return `false` otherwise.
+-   The function takes an argument `min`, which will be the minimum number of votes that anyone in the election currently has.\
+-   The function should return `true` if every candidate remaining in the election has the same number of votes, and should return `false` otherwise.\
 
-**`eliminate`**
 :white_check_mark: Complete the eliminate function.
 
--   The function takes an argument `min`, which will be the minimum number of votes that anyone in the election currently has.
--   The function should eliminate the candidate (or candidates) who have `min` number of votes.
+-   The function takes an argument `min`, which will be the minimum number of votes that anyone in the election currently has.\
+-   The function should eliminate the candidate (or candidates) who have `min` number of votes.\
 
 ##### Examples
 
