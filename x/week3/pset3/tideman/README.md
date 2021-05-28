@@ -4,7 +4,7 @@
 
 A program that runs a [Tideman election](https://en.wikipedia.org/wiki/Ranked_pairs).
 
-[🔗 Read more about the problem](https://cs50.harvard.edu/x/2021/psets/3/runoff)
+[🔗 Read more about the problem](https://cs50.harvard.edu/x/2021/psets/3/tideman)
 
 ##### Requirements
 
