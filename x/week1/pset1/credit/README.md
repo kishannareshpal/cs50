@@ -63,7 +63,7 @@ INVALID
 
 ```bash
 # Compile
-$ make credit.c
+$ make credit
 # Execute
 $ ./credit
 ```

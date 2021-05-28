@@ -45,7 +45,7 @@ Player 2 wins! # Output: The player with the most points, wins.
 
 ```bash
 # Compile
-$ make scrabble.c
+$ make scrabble
 # Execute
 $ ./scrabble
 ```

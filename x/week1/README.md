@@ -2,8 +2,8 @@
 
 #### Labs:
 
--   [Hello](./lab/hello)
--   [Population](./lab/population)
+-   [Hello](./lab1/hello)
+-   [Population](./lab1/population)
 
 #### Problem Set:
 

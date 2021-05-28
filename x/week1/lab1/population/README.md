@@ -33,7 +33,7 @@ Years: 9 # Output
 
 ```bash
 # Compile
-$ make population.c
+$ make population
 # Execute
 $ ./population
 ```

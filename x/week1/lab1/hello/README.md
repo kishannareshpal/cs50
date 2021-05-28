@@ -8,7 +8,7 @@ A program which prompts the user for their name and then prints `hello, <name>`,
 
 ```bash
 # Compile
-$ make hello.c
+$ make hello
 # Execute
 $ ./hello
 ```

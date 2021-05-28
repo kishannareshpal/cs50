@@ -34,7 +34,7 @@ Height: 8
 
 ```bash
 # Compile
-$ make mario.c
+$ make mario
 # Execute
 $ ./mario
 ```

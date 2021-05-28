@@ -31,7 +31,7 @@ Change: 23
 
 ```bash
 # Compile
-$ make cash.c
+$ make cash
 # Execute
 $ ./cash
 ```
