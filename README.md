@@ -18,6 +18,7 @@ Introduction to the intellectual enterprises of computer science and the art of 
 -   :one: [Week 1: C](./x/week1/)
 -   :two: [Week 2: Arrays](./x/week2/)
 -   :three: [Week 3: Algorithms](./x/week3/)
+-   :four: [Week 4: Memory](./x/week4/)
 
 ### CS50w – Web Programming with Python and JavaScript
 
