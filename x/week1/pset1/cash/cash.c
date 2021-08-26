@@ -10,7 +10,7 @@ int main(void)
     {
         change = get_float("Change owed: ");
     }
-    while (change <= 0);
+    while (change < 0);
 
     // Greedy algorithm
     // Convert dollars to cents to avoid floating point tiny errors.
@@ -26,13 +26,13 @@ int main(void)
             owed -= 25;
 
         }
-        else if (owed >= 10 && owed < 25)
+        else if (owed >= 10)
         {
             // give one dime (10¢)
             owed -= 10;
 
         }
-        else if (owed >= 5 && owed < 10)
+        else if (owed >= 5)
         {
             // give one nickel (5¢)
             owed -= 5;
