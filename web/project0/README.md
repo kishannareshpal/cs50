@@ -34,6 +34,6 @@ View the app demo: [https://youtu.be/irpggw_5WBQ](https://youtu.be/irpggw_5WBQ)
 
 ## Usage
 Please see the live demo here:
-- https://kishannareshpal.github.io/cs50/project0/<br>
+- https://kishannareshpal.github.io/cs50/web/project0/<br>
 
 Please see the demo video linked on top.
